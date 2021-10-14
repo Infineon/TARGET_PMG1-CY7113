@@ -27,6 +27,15 @@ extern "C" {
 #endif
 
 /**
+ * \cond INTERNAL
+ */
+/* WIFI interface types */
+#define CYBSP_SDIO_INTERFACE             (0)
+#define CYBSP_SPI_INTERFACE              (1)
+#define CYBSP_M2M_INTERFACE              (2)
+/** \endcond */
+
+/**
  * \addtogroup group_bsp_pin_state Pin States
  * \{
  * Macros to abstract out whether the LEDs & Buttons are wired high or active low.

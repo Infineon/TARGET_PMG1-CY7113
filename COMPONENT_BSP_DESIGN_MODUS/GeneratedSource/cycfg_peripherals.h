@@ -4,13 +4,14 @@
 * Description:
 * Peripheral Hardware Block configuration
 * This file was automatically generated and should not be modified.
-* Tools Package 2.3.0.4276
-* mtb-pdl-cat2 1.2.0.0
+* Tools Package 2.4.0.5721
+* mtb-pdl-cat2 1.4.0.5338
 * personalities 5.0.0.0
-* udd 3.0.0.1156
+* udd 3.0.0.1428
 *
 ********************************************************************************
-* Copyright 2021 Cypress Semiconductor Corporation
+* Copyright 2021 Cypress Semiconductor Corporation (an Infineon company) or
+* an affiliate of Cypress Semiconductor Corporation.
 * SPDX-License-Identifier: Apache-2.0
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -34,7 +35,7 @@
 #include "cy_csd.h"
 #include "cy_usbfs_dev_drv.h"
 #if defined (CY_USING_HAL)
-	#include "cyhal_hwmgr.h"
+    #include "cyhal_hwmgr.h"
 #endif //defined (CY_USING_HAL)
 #include "cy_usbpd_common.h"
 
@@ -85,7 +86,7 @@ extern "C" {
 extern cy_stc_csd_context_t cy_csd_0_context;
 extern const cy_stc_usbfs_dev_drv_config_t CYBSP_USB_config;
 #if defined (CY_USING_HAL)
-	extern const cyhal_resource_inst_t CYBSP_USB_obj;
+    extern const cyhal_resource_inst_t CYBSP_USB_obj;
 #endif //defined (CY_USING_HAL)
 extern const cy_stc_fault_vbus_ovp_cfg_t mtb_usbpd_port0_ovp_config;
 extern const cy_stc_fault_vbus_uvp_cfg_t mtb_usbpd_port0_uvp_config;

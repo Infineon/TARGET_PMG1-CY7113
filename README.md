@@ -2,7 +2,7 @@
 
 ## Overview
 
-The CY7113 EZ-PD PMG1-S3 Prototyping Kit is a development platform to design products which can be powered from a high-voltage USB PD port, and also need a microcontroller with CapSense capability to implement different applications.
+The CY7113 EZ-PD PMG1-S3 Prototyping Kit is a development platform to design products which can be powered from a high-voltage USB PD port, and also need a microcontroller with CAPSENSE capability to implement different applications.
 
 ![](docs/html/board.png)
 
@@ -13,7 +13,7 @@ To use code from the BSP, simply include a reference to `cybsp.h`.
 ### Kit Features:
 
 * USB PD 3.0 compliant Sink which can support up to 100W (20V, 5A) of power consumption.
-* Support for two self-capacitance based CapSense buttons and one 5-segment slider.
+* Support for two self-capacitance based CAPSENSE buttons and one 5-segment slider.
 * USB bus powered operation.
 * KitProg3 based programming and debug interface.
 * Access to the pins of PMG1-S3 silicon (CYPM1311-48LQXI) in hardware and support for BSP, HAL, PDL and Middleware in Modus Toolbox.
@@ -62,10 +62,10 @@ See the [BSP API Reference Manual][api] for the complete list of the provided in
 * [PMG1-CY7113 Documentation](http://www.cypress.com/CY7113)
 * [Cypress Semiconductor, an Infineon Technologies Company](http://www.cypress.com)
 * [Infineon GitHub](https://github.com/infineon)
-* [ModusToolbox](https://www.cypress.com/products/modustoolbox-software-environment)
+* [ModusToolbox™](https://www.cypress.com/products/modustoolbox-software-environment)
 
-[api]: https://Infineon.github.io/TARGET_PMG1-CY7113/html/modules.html
-[settings]: https://Infineon.github.io/TARGET_PMG1-CY7113/html/md_bsp_settings.html
+[api]: https://infineon.github.io/TARGET_PMG1-CY7113/html/modules.html
+[settings]: https://infineon.github.io/TARGET_PMG1-CY7113/html/md_bsp_settings.html
 
 ---
 © Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation, 2019-2021.

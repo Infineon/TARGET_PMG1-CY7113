@@ -4,13 +4,14 @@
 * Description:
 * Clock configuration
 * This file was automatically generated and should not be modified.
-* Tools Package 2.3.0.4276
-* mtb-pdl-cat2 1.2.0.0
+* Tools Package 2.4.0.5721
+* mtb-pdl-cat2 1.4.0.5338
 * personalities 5.0.0.0
-* udd 3.0.0.1156
+* udd 3.0.0.1428
 *
 ********************************************************************************
-* Copyright 2021 Cypress Semiconductor Corporation
+* Copyright 2021 Cypress Semiconductor Corporation (an Infineon company) or
+* an affiliate of Cypress Semiconductor Corporation.
 * SPDX-License-Identifier: Apache-2.0
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -32,7 +33,7 @@
 #include "cycfg_notices.h"
 #include "cy_sysclk.h"
 #if defined (CY_USING_HAL)
-	#include "cyhal_hwmgr.h"
+    #include "cyhal_hwmgr.h"
 #endif //defined (CY_USING_HAL)
 
 #if defined(__cplusplus)
@@ -56,19 +57,19 @@ extern "C" {
 #define CLK_FILTER1_NUM 3U
 
 #if defined (CY_USING_HAL)
-	extern const cyhal_resource_inst_t CLK_CSD_obj;
+    extern const cyhal_resource_inst_t CLK_CSD_obj;
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
-	extern const cyhal_resource_inst_t CLK_PDRX_obj;
+    extern const cyhal_resource_inst_t CLK_PDRX_obj;
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
-	extern const cyhal_resource_inst_t CLK_PDTX_obj;
+    extern const cyhal_resource_inst_t CLK_PDTX_obj;
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
-	extern const cyhal_resource_inst_t CLK_PDSAR_obj;
+    extern const cyhal_resource_inst_t CLK_PDSAR_obj;
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
-	extern const cyhal_resource_inst_t CLK_FILTER1_obj;
+    extern const cyhal_resource_inst_t CLK_FILTER1_obj;
 #endif //defined (CY_USING_HAL)
 
 void init_cycfg_clocks(void);
