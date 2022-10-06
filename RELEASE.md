@@ -1,5 +1,5 @@
 ### PMG1-CY7113 BSP
-The CY7113 EZ-PD PMG1-S3 Prototyping Kit is a development platform to design products which can be powered from a high-voltage USB PD port, and also need a microcontroller with CAPSENSE capability to implement different applications.
+The CY7113 EZ-PD PMG1-S3 Prototyping Kit is a development platform to design products which can be powered from a high- voltage USB PD port, and also need a microcontroller with CAPSENSE™ capability to implement different applications.
 
 NOTE: BSPs are versioned by family. This means that version 1.2.0 of any BSP in a family (eg: PSoC™ 6) will have the same software maturity level. However, not all updates are necessarily applicable for each BSP in the family so not all version numbers will exist for each board. Additionally, new BSPs may not start at version 1.0.0. In the event of adding a common feature across all BSPs, the libraries are assigned the same version number. For example if BSP_A is at v1.3.0 and BSP_B is at v1.2.0, the event will trigger a version update to v1.4.0 for both BSP_A and BSP_B. This allows the common feature to be tracked in a consistent way.
 
@@ -15,6 +15,13 @@ The PMG1-CY7113 library includes the following:
 
 ### What Changed?
 #### v3.0.0
+Note: This revision is only compatible with ModusToolbox Tools 3.0 and newer.
+* Removed default dependency on HAL and CAPSENSE™ middleware. If either is needed they can be added to the application using the library manager.
+* Updated recipe-make, core-make, and PDL to new major versions
+* Regenerated code with Configurators from ModusToolbox™ v3.0.0
+* Renamed top level board makefile to bsp.mk
+* Removed version.xml file in favor of new props.json
+#### v2.0.0
 * Updated to HAL dependency to v2.0.0
 * Updated CAPSENSE™ dependency to v3.0.0
 * Regenerated code with Configurators from ModusToolbox™ v2.4.0
@@ -34,12 +41,12 @@ This version of the PMG1-CY7113 BSP was validated for compatibility with the fol
 
 | Software and Tools                        | Version |
 | :---                                      | :----:  |
-| ModusToolbox™ Software Environment        | 2.4.0   |
+| ModusToolbox™ Software Environment        | 3.0.0   |
 | GCC Compiler                              | 10.3.1  |
-| IAR Compiler                              | 8.4     |
-| ARM Compiler                              | 6.11    |
+| IAR Compiler                              | 9.30.1  |
+| ARM Compiler                              | 6.16    |
 
-Minimum required ModusToolbox™ Software Environment: v2.4.0
+Minimum required ModusToolbox™ Software Environment: v3.0.0
 
 ### More information
 * [PMG1-CY7113 BSP API Reference Manual][api]
@@ -51,4 +58,4 @@ Minimum required ModusToolbox™ Software Environment: v2.4.0
 [api]: https://infineon.github.io/TARGET_PMG1-CY7113/html/modules.html
 
 ---
-© Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation, 2019-2021.
+© Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation, 2019-2022.

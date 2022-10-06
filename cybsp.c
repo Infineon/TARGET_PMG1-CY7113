@@ -7,7 +7,7 @@
  *
  ***************************************************************************************************
  * \copyright
- * Copyright 2018-2021 Cypress Semiconductor Corporation (an Infineon company) or
+ * Copyright 2018-2022 Cypress Semiconductor Corporation (an Infineon company) or
  * an affiliate of Cypress Semiconductor Corporation
  *
  * SPDX-License-Identifier: Apache-2.0
@@ -43,6 +43,7 @@ extern "C" {
     #define CYBSP_SYSCLK_PM_CALLBACK_ORDER  (255u)
 #endif
 
+#if !defined(CYBSP_CUSTOM_SYSCLK_PM_CALLBACK)
 //--------------------------------------------------------------------------------------------------
 // cybsp_register_sysclk_pm_callback
 //
@@ -70,6 +71,9 @@ static cy_rslt_t cybsp_register_sysclk_pm_callback(void)
 }
 
 
+#endif // if !defined(CYBSP_CUSTOM_SYSCLK_PM_CALLBACK)
+
+
 //--------------------------------------------------------------------------------------------------
 // cybsp_init
 //--------------------------------------------------------------------------------------------------
@@ -92,13 +96,15 @@ cy_rslt_t cybsp_init(void)
     #endif
     #endif // if defined(CY_USING_HAL)
 
-    #if defined(COMPONENT_BSP_DESIGN_MODUS) || defined(COMPONENT_CUSTOM_DESIGN_MODUS)
     init_cycfg_all();
-    #endif
 
     if (CY_RSLT_SUCCESS == result)
     {
+        #if defined(CYBSP_CUSTOM_SYSCLK_PM_CALLBACK)
+        result = cybsp_register_custom_sysclk_pm_callback();
+        #else
         result = cybsp_register_sysclk_pm_callback();
+        #endif
     }
 
     return result;

@@ -1,12 +1,12 @@
 /***************************************************************************//**
 * \file system_cat2.h
-* \version 1.10.1
+* \version 2.0
 *
 * \brief Device system header file.
 *
 ********************************************************************************
 * \copyright
-* (c) (2016-2021), Cypress Semiconductor Corporation (an Infineon company) or
+* (c) (2016-2022), Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.
 *
 * SPDX-License-Identifier: Apache-2.0
@@ -129,7 +129,7 @@
 * doesn't check for heap and stack collisions during excessive memory allocations.
 * To ensure the heap always remains within the range defined by __HeapBase and
 * __HeapLimit linker symbols, provide a strong override for the 'sbrk' function:
-* \snippet startup/snippet/main.c snippet_sbrk
+* \snippet startup_snippet.c snippet_sbrk
 * For FreeRTOS-enabled multi-threaded applications, it is sufficient to include
 * clib-support library that provides newlib-compatible implementations of
 * 'sbrk', '__malloc_lock' and '__malloc_unlock':
@@ -170,6 +170,16 @@
 * \section group_system_config_changelog Changelog
 * <table class="doxtable">
 *   <tr><th>Version</th><th>Changes</th><th>Reason for Change</th></tr>
+*   <tr>
+*     <td>2.0</td>
+*     <td>Removed unused extern cy_delayFreqHz.</td>
+*     <td>PDL major revision.</td>
+*   </tr>
+*   <tr>
+*     <td>1.10.2</td>
+*     <td>Update the paths to the code snippets.</td>
+*     <td>PDL structure update.</td>
+*   </tr>
 *   <tr>
 *     <td rowspan="2">1.10.1</td>
 *     <td>Added support for PMG1S0, PMG1S1, PMG1S2, PMG1S3 devices.</td>
@@ -263,7 +273,6 @@ extern void     Default_Handler (void);
 
 extern void     Cy_OnResetUser(void);
 
-extern uint32_t cy_delayFreqHz;
 extern uint32_t cy_delayFreqKhz;
 extern uint8_t  cy_delayFreqMhz;
 extern uint32_t cy_delay32kMs;
