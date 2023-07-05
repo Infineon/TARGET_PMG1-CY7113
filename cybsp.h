@@ -28,6 +28,7 @@
 
 #include "cy_result.h"
 #include "cybsp_types.h"
+#include "cybsp_hw_config.h"
 
 #if defined(__cplusplus)
 extern "C" {

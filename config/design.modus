@@ -401,6 +401,30 @@
                 <Block location="usbpd[0]">
                     <Alias value="PD_PORT0"/>
                     <Personality template="m0s8usbpd" version="1.0">
+                        <Param id="BuckBoost" value="false"/>
+                        <Param id="CableResistance" value="0"/>
+                        <Param id="OutOffsetVolt" value="0"/>
+                        <Param id="CurrSenseResistor" value="5000"/>
+                        <Param id="NfetSrcDrvStrength" value="0"/>
+                        <Param id="TransitionUp" value="40"/>
+                        <Param id="TransitionDown" value="1"/>
+                        <Param id="BuckBoostOperatingMode" value="0"/>
+                        <Param id="PwmMode" value="4"/>
+                        <Param id="PwmFixedFrequency" value="400"/>
+                        <Param id="LS1GatePullUp" value="7"/>
+                        <Param id="LS2GatePullUp" value="7"/>
+                        <Param id="HS1GatePullUp" value="7"/>
+                        <Param id="HS2GatePullUp" value="7"/>
+                        <Param id="LS1GatePullDown" value="7"/>
+                        <Param id="LS2GatePullDown" value="7"/>
+                        <Param id="HS1GatePullDown" value="7"/>
+                        <Param id="HS2GatePullDown" value="7"/>
+                        <Param id="PwmDitheringType" value="0"/>
+                        <Param id="PwmDitheringRange" value="0"/>
+                        <Param id="PowerInductor" value="6800"/>
+                        <Param id="PeakCurrentSenseResistor" value="5000"/>
+                        <Param id="PeakCurrentLimit" value="30000"/>
+                        <Param id="BbClkFrequency" value="24"/>
                         <Param id="VbusOvp" value="true"/>
                         <Param id="OvpMode" value="2"/>
                         <Param id="OvpThresh" value="20"/>
